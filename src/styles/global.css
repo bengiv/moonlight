@@ -5,45 +5,50 @@
  */
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--accent: #4340B1;
+	--accent-dark: #211E86;
+	--moonlight: #0C0C16;
+	--moonlight-c: #1a1a32;
+	--starlight: #F3EDDE;
+	--starlight-d: #D6CFBF;
+	--black: #080809;
+	--gray: #6F6F70;
+	--gray-light: 224, 224, 229;
+	--gray-dark: 45, 45, 46;
+	--gray-gradient: rgba(var(--gray-light), 50%), #fcfcfc;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
 @font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
+	font-family: 'Space Grotesk';
+	src: url('/fonts/SpaceGrotesk.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
+	font-family: 'Space Grotesk';
+	src: url('/fonts/SpaceGrotesk.woff2') format('woff2');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
 body {
-	font-family: 'Atkinson', sans-serif;
+	font-family: 'Space Grotesk', sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
+	background: var(--moonlight);
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 1.7;
 }
 main {
 	width: 720px;
+	color: var(--starlight);
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
@@ -55,7 +60,7 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	color: rgb(var(--starlight));
 	line-height: 1.2;
 }
 h1 {
@@ -83,6 +88,12 @@ a {
 a:hover {
 	color: var(--accent);
 }
+.blogtitle {
+	color: var(--starlight);
+}
+.blogtitle:hover {
+	color: var(--starlight-d)
+}
 p {
 	margin-bottom: 1em;
 }
@@ -106,7 +117,7 @@ img {
 }
 code {
 	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
+	background-color: var(--moonlight-c);
 	border-radius: 2px;
 }
 pre {
